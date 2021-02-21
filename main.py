@@ -25,6 +25,7 @@ def handle_videochange(json, methods=['GET', 'POST']):
 @socketio.on("linkChange")
 def handle_videochange(json, methods=['GET', 'POST']):
     print('received call to change video: ' + str(json))
+    socketio.emit('changeLink', json, callback=messageReceived)
 
 @socketio.on('requestVideo')
 def handle_my_custom_event(json, methods=['GET', 'POST']):
