@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Flask_Chat_App</title>
+  <title>Watch and Chat</title>
+  <link rel="stylesheet" href="session.css">
 </head>
 <body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.1/socket.io.min.js"></script>
   
-  
-  <div id="player"></div>
+  <header>
+    <h1>Watch and Chat</h1>
+  </header>
 
-  <div>
-  <input name="videoUrl" type="text" id="videoUrl" placeholder="youtube video link"/>
-  <button onclick="loadVideo()">Load Video</button>
+  <div class="search">
+    <input class="seachBar" name="videoUrl" type="text" id="videoUrl" placeholder="youtube video link"/>
   </div>
+  <div class="searchBtnCont">
+    <button class="searchBtn" onclick="loadVideo()">Load Video</button>
+  </div>
+  
+  <div id="player" class="player"></div>
   
   <script type="text/javascript">
     // 2. This code loads the IFrame Player API code asynchronously.
