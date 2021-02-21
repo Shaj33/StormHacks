@@ -22,5 +22,19 @@ def handle_videochange(json, methods=['GET', 'POST']):
     print('received call to adjust video time: ' + str(json))
     socketio.emit('changeVideo', json, callback=messageReceived)
 
+@socketio.on("linkChange")
+def handle_videochange(json, methods=['GET', 'POST']):
+    print('received call to change video: ' + str(json))
+
+@socketio.on('requestVideo')
+def handle_my_custom_event(json, methods=['GET', 'POST']):
+    print('received my event: ' + str(json))
+    socketio.emit('getVideo', callback=messageReceived)
+
+@socketio.on('returnVideo')
+def handle_my_custom_event(json, methods=['GET', 'POST']):
+    print('received my event: ' + str(json))
+    socketio.emit('updateVideo', json, callback=messageReceived)
+
 if __name__ == '__main__':
     socketio.run(app, debug=True)
