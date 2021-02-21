@@ -3,19 +3,19 @@
   padding: 0px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #3f3f3f;
 }
 
 header {
-  background-color: #203448;
-  color: #ff9f2d;
+  background-color: #3f3f3f;
+  color: #e46a6b;
   width: 100%;
   text-align: center;
   padding: 20px;
 }
 
 .player {
-  background-color: #203448;
-  padding-top: 50px;
+  background-color: #3f3f3f;
   padding-bottom: 50px;
   padding-left: 20%;
   padding-right: 20%;
@@ -23,19 +23,19 @@ header {
 }
 
 .search {
-  background-color: #203448;
   text-align: center;
   width: 100%;
+  height: 100;
 }
-.searchBar input {
-  margin-left: 1000px;
-  max-width: 500px;
-  height: 40px;
-  text-align: center;
+input.seachBar {
+  background-color: white;
+  width: 40%;
+  height: 25px;
+  border-radius: 10px;
 }
 
 .searchBtnCont {
-  background-color: #203448;
+  background-color: #3f3f3f;
   width: 100%;
 }
 
@@ -48,9 +48,9 @@ header {
   text-transform: uppercase;
   letter-spacing: 1px;
   text-decoration: none;
-  background: #ff9f2d;
+  background: #e46a6b;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
   display: inline-block;
   border: none;
   transition: all 0.4s ease 0s;
