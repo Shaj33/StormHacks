@@ -9,6 +9,11 @@
   
   
   <div id="player"></div>
+
+  <div>
+  <input name="videoUrl" type="text" id="videoUrl" placeholder="youtube video link"/>
+  <button onclick="loadVideo()">Load Video</button>
+  </div>
   
   <script type="text/javascript">
     // 2. This code loads the IFrame Player API code asynchronously.
@@ -77,6 +82,22 @@
             player.pauseVideo();
         }
     } )
+
+    //Function to load desired video
+    function loadVideo() {
+
+      var x = document.getElementById("videoUrl").value;
+      //var x = 'a';
+      console.log(x.split("v=")[1].substring(0, 11))
+
+      player.loadVideoById({
+        //videoId:'_VtMSJlEKAg',
+        videoId: x.split("v=")[1].substring(0, 11),
+        startSeconds: 0
+        //endSeconds: 60
+      });
+
+    }
   </script>
   <h3 style='color: #ccc;font-size: 30px;'>No message yet..</h3>
   <div class="message_holder"></div>
