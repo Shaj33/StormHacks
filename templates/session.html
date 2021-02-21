@@ -87,20 +87,17 @@
     function loadVideo() {
 
       var x = document.getElementById("videoUrl").value;
-      //var x = 'a';
       console.log(x.split("v=")[1].substring(0, 11))
 
       player.loadVideoById({
-        //videoId:'_VtMSJlEKAg',
         videoId: x.split("v=")[1].substring(0, 11),
         startSeconds: 0
-        //endSeconds: 60
       });
 
     }
   </script>
   <h3 style='color: #ccc;font-size: 30px;'>No message yet..</h3>
-  <div class="message_holder"></div>
+  <div id="messages" class="message_holder"></div>
   <form action="" method="POST">
     <input type="text" class="username" placeholder="User Name"/>
     <input type="text" class="message" placeholder="Messages"/>
@@ -133,6 +130,9 @@
         $( 'div.message_holder' ).append( '<div><b style="color: #000">'+msg.user_name+'</b> '+msg.message+'</div>' )
       }
     })
+
+    document.getElementById("messages").setAttribute("style","overflow:auto;height:90px;width:500px");
+
   </script>
 
 </body>
