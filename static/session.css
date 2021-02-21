@@ -1,0 +1,66 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #3f3f3f;
+}
+
+header {
+  background-color: #3f3f3f;
+  color: #e46a6b;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+.player {
+  background-color: #3f3f3f;
+  padding-bottom: 50px;
+  padding-left: 20%;
+  padding-right: 20%;
+  width: 60%;
+}
+
+.search {
+  text-align: center;
+  width: 100%;
+  height: 100;
+}
+input.seachBar {
+  background-color: white;
+  width: 40%;
+  height: 25px;
+  border-radius: 10px;
+}
+
+.searchBtnCont {
+  background-color: #3f3f3f;
+  width: 100%;
+}
+
+.searchBtn {
+  margin: 10px;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  background: #e46a6b;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+}
+
+.searchBtn:hover {
+  background: #434343;
+  letter-spacing: 1px;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
+}
